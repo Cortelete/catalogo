@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Procedure, Category, SubCategory } from '../types';
-import { CATEGORIES } from '../data/procedures';
+import { CATEGORIES } from '../public/data/procedures';
 import ProcedureCard from '../components/ProcedureCard';
 
 interface CatalogPageProps {
