@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Procedure, BookingFormData } from '../types';
 import ShimmerButton from './ShimmerButton';
@@ -101,7 +100,10 @@ Aguardo seu contato para confirmar. Obrigada! ✨`;
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-amber-100/80 mb-2">Qual seu nome completo?</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} className="w-full bg-gray-700/50 border border-amber-50/20 rounded-lg p-3 focus:ring-1 focus:ring-amber-200 focus:outline-none transition" placeholder="Seu nome" />
-            <ShimmerButton onClick={nextStep} className="w-full mt-6" disabled={!formData.name}>Próximo</ShimmerButton>
+            <div className="flex gap-4 mt-6">
+               <button onClick={resetAndClose} className="w-1/3 text-amber-200">Voltar</button>
+               <ShimmerButton onClick={nextStep} className="w-2/3" disabled={!formData.name}>Próximo</ShimmerButton>
+            </div>
           </div>
         );
       case 1: // Date & Time

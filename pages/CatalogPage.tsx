@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Procedure, Category, SubCategory } from '../types';
 import { CATEGORIES } from '../public/data/procedures';
 import ProcedureCard from '../components/ProcedureCard';
+import BackButton from '../components/BackButton';
 
 interface CatalogPageProps {
   onProcedureSelect: (procedure: Procedure) => void;
@@ -27,6 +28,9 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onProcedureSelect }) => {
 
   return (
     <div className="container mx-auto py-8 md:py-12 px-4 flex flex-col items-center">
+       <div className="w-full max-w-5xl self-start">
+        <BackButton className="mb-8" />
+      </div>
       <div className="text-center mb-8 md:mb-12 max-w-3xl">
         <h1 className="font-serif text-2xl md:text-4xl text-amber-50">Serviços</h1>
         <p className="mt-4 max-w-2xl mx-auto text-sm text-amber-100/70">

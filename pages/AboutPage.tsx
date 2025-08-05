@@ -1,9 +1,11 @@
 import React from 'react';
 import ShimmerButton from '../components/ShimmerButton';
+import BackButton from '../components/BackButton';
 
 const AboutPage: React.FC = () => {
   return (
     <div className="container mx-auto py-16 px-4 md:py-24">
+        <BackButton className="mb-8" />
        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
           <div className="w-full md:w-1/3 flex-shrink-0">
             <img 
